@@ -1978,6 +1978,9 @@ class Project(object):
 
     cmd = ['fetch']
 
+    # Force fetching of moved tags
+    cmd.append('-f')
+
     if depth:
       cmd.append('--depth=%s' % depth)
     else:
